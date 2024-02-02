@@ -1,9 +1,6 @@
 input.onButtonEvent(Button.A, ButtonEvent.Click, function () {
     iFahrstrecke = 200
 })
-function car4sender61 () {
-	
-}
 input.onButtonEvent(Button.B, ButtonEvent.Click, function () {
     iFahrstrecke = 0
 })
@@ -34,6 +31,7 @@ _4digit = grove.createDisplay(DigitalPin.C16, DigitalPin.C17)
 qwiicjoystick.beimStart(qwiicjoystick.qwiicjoystick_eADDR(qwiicjoystick.eADDR.Joystick_x20))
 let aJoy = qwiicjoystick.readArray(qwiicjoystick.qwiicjoystick_eADDR(qwiicjoystick.eADDR.Joystick_x20), qwiicjoystick.eBereich.B_0_255)
 radio.setGroup(240)
+radio.setTransmitPower(7)
 sendeBuffer = i2c.create(4)
 iDisplay = -1
 iFahrstrecke = 0
